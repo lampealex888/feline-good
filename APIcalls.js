@@ -87,8 +87,6 @@ function getJokeImage(img, fact) {
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var data = JSON.parse(this.responseText);
-        document.getElementById(img).src = "";
-        document.getElementById(img).alt = "joke";
         document.getElementById(fact).innerText = data.joke;
         }
     };
