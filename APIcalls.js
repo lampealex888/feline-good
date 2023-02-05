@@ -94,6 +94,16 @@ function getJokeImage(img, fact) {
     };
     xhttp.open("GET", "https://some-random-api.ml/others/joke", true);
     xhttp.send();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById(img).src = data.link;
+        document.getElementById(img).alt = "wink";
+        }
+    };
+    xhttp.open("GET", "https://some-random-api.ml/animu/wink", true);
+    xhttp.send();
 };
 
 function getRedPandaImage(img, f) {
