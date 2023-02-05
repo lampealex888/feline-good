@@ -95,3 +95,45 @@ function getJokeImage(img, fact) {
     xhttp.open("GET", "https://some-random-api.ml/others/joke", true);
     xhttp.send();
 };
+
+function getRedPandaImage(img, f) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById(img).src = data.image;
+        document.getElementById(img).alt = "panda";
+        document.getElementById(f).innerText = data.fact;
+        }
+    };
+    xhttp.open("GET", "https://some-random-api.ml/animal/red_panda", true);
+    xhttp.send();
+};
+
+function getKoalaImage(img, f) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById(img).src = data.image;
+        document.getElementById(img).alt = "koala";
+        document.getElementById(f).innerText = data.fact;
+        }
+    };
+    xhttp.open("GET", "https://some-random-api.ml/animal/koala", true);
+    xhttp.send();
+}
+
+function getRaccoonImage(img, f) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById(img).src = data.image;
+        document.getElementById(img).alt = "racoon";
+        document.getElementById(f).innerText = data.fact;
+        }
+    };
+    xhttp.open("GET", "https://some-random-api.ml/animal/raccoon", true);
+    xhttp.send();
+}

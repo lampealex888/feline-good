@@ -9,7 +9,10 @@ let dogVal = 0;
 let foxVal = 0;
 let birdVal = 0;
 let memesVal = 0;
+let redpandaVal = 0;
+let koalaVal = 0;
 let jokesVal = 0;
+let raccoonVal = 0;
 let modBase = 2;
 
 initiate();
@@ -23,6 +26,9 @@ function initiate(){
     vals.set("bird",0);
     vals.set("memes",0);
     vals.set("jokes",0);
+    vals.set("redpanda",0);
+    vals.set("koala",0);
+    vals.set("raccoon",0);
 }
 //this function chooses the category for the next image
 function chooseCategory(){
@@ -35,6 +41,9 @@ function chooseCategory(){
     birdVal = vals.get("bird");
     memesVal = vals.get("memes");
     jokesVal = vals.get("jokes");
+    redpandaVal = vals.get("redpanda");
+    koalaVal = vals.get("koala");
+    raccoonVal = vals.get("raccoon");
     
     //Rolling a value for each category between 1 and 20 and adding modifier
     pandaRand = Math.floor(Math.random()*21) + pandaVal;
@@ -44,9 +53,12 @@ function chooseCategory(){
     birdRand = Math.floor(Math.random()*21) + birdVal;
     memesRand = Math.floor(Math.random()*21) + memesVal;
     jokesRand = Math.floor(Math.random()*21) + jokesVal;
+    redpandaRand = Math.floor(Math.random()*21) + redpandaVal;
+    koalaRand = Math.floor(Math.random()*21) + koalaVal;
+    raccoonRand = Math.floor(Math.random()*21) + raccoonVal;
     
-    const choiceArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand];
-    const sortedArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand];
+    let choiceArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand];
+    let sortedArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand];
     //sorting the array in reverse order, highest value(first term) will be the one chosen
     sortedArr.sort(function(a, b){return b - a});
     //creating array with just the values, and array with just the keys, same order as the map
@@ -81,6 +93,15 @@ function generateImage(img, info){
     }
     else if(category=="jokes"){
       getJokeImage(img, info);
+    }
+    else if(category=="redpanda"){
+      getRedPandaImage(img, info);
+    }
+    else if(category=="koala"){
+      getKoalaImage(img, info);
+    }
+    else if(category=="raccoon"){
+      getRaccoonImage(img, info);
     }
   }
 /*
@@ -123,6 +144,21 @@ function likeImage(categoryParam){
     if(jokesVal<=20){
         jokesVal+=modBase;
     }
+  } 
+  else if(categoryParam=="redpanda"){
+    if(redpandaVal<=20){
+        redpandaVal+=modBase;
+    }
+  }
+  else if(categoryParam=="koala"){
+    if(koalaVal<=20){
+        koalaVal+=modBase;
+    }
+  }
+  else if(categoryParam=="raccoon"){
+    if(raccoonVal<=20){
+        raccoonVal+=modBase;
+    }
   }
 }
 
@@ -154,5 +190,14 @@ function dislikeImage(categoryParam){
     }
     else if(categoryParam=="jokes"){
       jokesVal-=modBase;
+    } 
+    else if(categoryParam=="redpanda"){
+      redpandaVal-=modBase;
+    }
+    else if(categoryParam=="koala"){
+      koalaVal-=modBase;
+    }
+    else if(categoryParam=="raccoon"){
+      raccoonVal-=modBase;
     }
   }

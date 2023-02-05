@@ -110,10 +110,8 @@ allCards.forEach(function (el) {
         event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
         if (event.deltaX > 0) {
         likeImage(currCategories[counter]);
-        console.log("Like");
         } else {
         dislikeImage(currCategories[counter]);
-        console.log("Dislike");
         }
         counter++;
         initCards();
@@ -140,12 +138,10 @@ function createButtonListener(love) {
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
-      console.log(currCategories[counter]);
       likeImage(currCategories[counter]);
       counter++;
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
-      console.log(currCategories[counter]);
       dislikeImage(currCategories[counter]);
       counter++;
     }
