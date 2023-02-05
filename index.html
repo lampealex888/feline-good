@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="hammer.min.js"></script>
+    <div class="title-wrapper">
+      <ul>
+        <li class="title-item"><img class="smiley-face" src="happy-face.svg" alt="smiley-face"></li>
+        <li class="title-item"><a href="index.html"><h1>Feline Good</h1></a></li>
+        <li class="title-item"><img class="smiley-face" src="happy-face.svg" alt="smiley-face"></li>
+        <!-- <li class="title-item"><img id="img_main"><button onclick="getJokeImage()">Test Me</button></li>
+        <li class="title-item"><button onclick="chooseCategory()">Choose category</button></li> -->
+      </ul>
+    </div>
+    <div id="images">
+      <div class="images--status">
+        <i class="fa fa-remove"></i>
+        <i class="fa fa-heart"></i>
+      </div>
+      <div class="images--cards">
+        <div class="images--card">
+          <img id="img1" src="" alt="">
+          <p id="fact1"></p>
+        </div>
+        <div class="images--card">
+          <img id="img2" src="" alt="">
+          <p id="fact2"></p>
+        </div>
+        <div class="images--card">
+          <img id="img3" src="" alt="">
+          <p id="fact3"></p>
+        </div>
+        <div class="images--card">
+          <img id="img4" src="" alt="">
+          <p id="fact4"></p>
+        </div>
+        <div class="images--card">
+          <img id="img5" src="" alt="">
+          <p id="fact5"></p>
+        </div>
+      </div>
+
+      <div class="images--buttons">
+        <button id="nope"><img src="X.svg"></button>
+        <button id="love"><img src="Heart.svg"></button>
+        <!-- <button id="star"><img src="star.svg"></button> -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li class="footer-item"><a href="about.html">About</a></li> <!-- Add link to about me page-->
+        <li class="footer-item"><a href="#">Help</a></li> <!-- Add link to help page-->
+        <!-- <li class="footer-item"><a href="#">Reset</a></li> Add link to reset page -->
+        <!-- <li class="footer-item"><a href="#">Reset</a></li> Add link to reset page -->
+      </ul>
+    </div> 
+    <script src="APIcalls.js"></script>
+    <script src="algorithm.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
