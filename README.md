@@ -10,10 +10,14 @@ Feline Good relies on one external library, namely hammer.mins.js for the multi-
 
 ## Links 
 
-### Live Demo
+Live Demo --> https://lampealex888.github.io/feline-good/
 
---> https://lampealex888.github.io/feline-good/
+DevPost Submission --> https://devpost.com/software/feline-good
 
-### DevPost Submission
+## Many Thanks To
 
---> https://devpost.com/software/feline-good
+* [Named Link]((https://some-random-api.ml/) "Some Random API") for their many beautiful APIs
+* [Named Link](https://github.com/D3vd/Meme_Api) "Meme API") for their meme API
+* [Named Link](https://hammerjs.github.io/) "Hammer.js") for their JavaScript Library that added multi-touch functionality
+
+
