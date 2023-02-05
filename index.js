@@ -22,7 +22,9 @@ function initCards(card, index) {
     let imageTemp = ["img1", "img2", "img3", "img4", "img5"];
     let factTemp = ["fact1", "fact2", "fact3", "fact4", "fact5"];
     for (let i = 0; i < 5; i++) {
-      category = chooseCategory();
+      do {
+        category = chooseCategory();
+      } while (currCategories.includes(category));
       currCategories[i] = category;
       generateImage(imageTemp[i], factTemp[i]);
     }
@@ -44,7 +46,9 @@ function newCards() {
   let imageTemp = ["img1", "img2", "img3", "img4", "img5"];
   let factTemp = ["fact1", "fact2", "fact3", "fact4", "fact5"];
   for (let i = 0; i < 5; i++) {
-    category = chooseCategory();
+    do {
+      category = chooseCategory();
+    } while (currCategories.includes(category));
     currCategories[i] = category;
     generateImage(imageTemp[i], factTemp[i]);
   }
