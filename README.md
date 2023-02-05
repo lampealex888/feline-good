@@ -8,6 +8,12 @@ Feline Good relies on a reactive architecture in order to coordinate the state a
 
 Feline Good relies on one external library, namely hammer.mins.js for the multi-touch functionality animations, but no frameworks for the front-end application. As noted in the Architecture section, Feline Good bootstraps its own application flow. We chose a reactive model in order to concisely handle the asynchronous aspect of the buttons and API calls.
 
-## Live Demo 
+## Links 
+
+### Live Demo
 
 --> https://lampealex888.github.io/feline-good/
+
+### DevPost Submission
+
+--> https://devpost.com/software/feline-good
