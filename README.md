@@ -1,4 +1,4 @@
-# Feline Good
+# Feline Good - She Innovates Hackathon 2023 Submission
 
 ## Architecture
 
