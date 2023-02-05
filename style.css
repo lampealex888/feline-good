@@ -4,7 +4,9 @@
     margin: 0;
 }
 body {
-    background: linear-gradient(0deg, #FCAECF, #7CBDD6);
+    /* background: linear-gradient(0deg, #FCAECF, #7CBDD6); */
+    background-image:url('background.gif'); 
+    background-size: 100% auto;
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
