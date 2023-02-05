@@ -1,4 +1,4 @@
-# feline-good
+# Feline Good
 
 ## Architecture
 
