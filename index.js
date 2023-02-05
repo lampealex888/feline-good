@@ -160,3 +160,14 @@ var nopeListener = createButtonListener(false);
 var loveListener = createButtonListener(true);
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
+window.addEventListener('keydown', (event) => {
+  switch (event.key) {
+    case "ArrowLeft":
+      nopeListener(event);
+      break;
+    case "ArrowRight":
+      loveListener(event);
+      break;
+    }
+});
