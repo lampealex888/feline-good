@@ -13,6 +13,7 @@ let redpandaVal = 0;
 let koalaVal = 0;
 let jokesVal = 0;
 let raccoonVal = 0;
+let kangarooVal = 0;
 let modBase = 2;
 
 initiate();
@@ -29,6 +30,7 @@ function initiate(){
     vals.set("redpanda",0);
     vals.set("koala",0);
     vals.set("raccoon",0);
+    vals.set("kangaroo",0);
 }
 //this function chooses the category for the next image
 function chooseCategory(){
@@ -44,6 +46,7 @@ function chooseCategory(){
     redpandaVal = vals.get("redpanda");
     koalaVal = vals.get("koala");
     raccoonVal = vals.get("raccoon");
+    kangarooVal = vals.get("kangaroo");
     
     //Rolling a value for each category between 1 and 20 and adding modifier
     pandaRand = Math.floor(Math.random()*21) + pandaVal;
@@ -56,9 +59,10 @@ function chooseCategory(){
     redpandaRand = Math.floor(Math.random()*21) + redpandaVal;
     koalaRand = Math.floor(Math.random()*21) + koalaVal;
     raccoonRand = Math.floor(Math.random()*21) + raccoonVal;
+    kangarooRand = Math.floor(Math.random()*21) + kangarooVal;
     
-    let choiceArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand];
-    let sortedArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand];
+    let choiceArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand, kangarooRand];
+    let sortedArr = [pandaRand, catRand, dogRand, foxRand, birdRand, memesRand, jokesRand, redpandaRand, koalaRand, raccoonRand, kangarooRand];
     //sorting the array in reverse order, highest value(first term) will be the one chosen
     sortedArr.sort(function(a, b){return b - a});
     //creating array with just the values, and array with just the keys, same order as the map
@@ -102,6 +106,9 @@ function generateImage(img, info){
     }
     else if(category=="raccoon"){
       getRaccoonImage(img, info);
+    }
+    else if(category=="kangaroo"){
+      getKangarooImage(img, info);
     }
   }
 /*
@@ -160,6 +167,11 @@ function likeImage(categoryParam){
         raccoonVal+=modBase;
     }
   }
+  else if(categoryParam=="kangaroo"){
+    if(kangarooVal<=20){
+        kangarooVal+=modBase;
+    }
+  }
 }
 
 /*
@@ -199,5 +211,8 @@ function dislikeImage(categoryParam){
     }
     else if(categoryParam=="raccoon"){
       raccoonVal-=modBase;
+    }
+    else if(categoryParam=="kangaroo"){
+      kangarooVal-=modBase;
     }
   }

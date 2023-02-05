@@ -137,3 +137,17 @@ function getRaccoonImage(img, f) {
     xhttp.open("GET", "https://some-random-api.ml/animal/raccoon", true);
     xhttp.send();
 }
+
+function getKangarooImage(img, f) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        document.getElementById(img).src = data.image;
+        document.getElementById(img).alt = "kangaroo";
+        document.getElementById(f).innerText = data.fact;
+        }
+    };
+    xhttp.open("GET", "https://some-random-api.ml/animal/kangaroo", true);
+    xhttp.send();
+}

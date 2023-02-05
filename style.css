@@ -177,22 +177,6 @@ body {
     background-color: #FFFFFF;
     border-radius: 75%;
 }
-  /* .images--buttons {
-    flex: 0 0 50px;
-    text-align: center;
-    padding-top: 20px;
-  }
-  
-  .images--buttons button {
-    border-radius: 50%;
-    line-height: 30px;
-    width: 30px;
-    border: 0;
-    background: #cb2424;
-    display: inline-block;
-    margin: 0 8px;
-  }
-  
   .images--buttons button:focus {
     outline: 0;
   }
@@ -200,7 +184,7 @@ body {
   .images--buttons i {
     font-size: 14px;
     vertical-align: middle;
-  } */
+  }
   
   .fa-heart {
     color: #FFACE4;
@@ -208,6 +192,14 @@ body {
   
   .fa-remove {
     color: #1585da;
+  }
+
+  #overlayheart {
+    max-height: 1em;
+  }
+
+  #overlayremove {
+    max-height: 1em;
   }
 
   /* footer */
