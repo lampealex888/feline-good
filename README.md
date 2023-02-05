@@ -16,7 +16,7 @@ DevPost Submission --> https://devpost.com/software/feline-good
 
 ## Many Thanks To
 
-* [Some Random API]((https://some-random-api.ml/) for their many beautiful APIs
+* [Some Random API](https://some-random-api.ml/) for their many beautiful APIs
 * [Meme API](https://github.com/D3vd/Meme_Api) for their meme API
 * [Hammer.js](https://hammerjs.github.io/) for their JavaScript Library that added multi-touch functionality
 
