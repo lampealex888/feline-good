@@ -18,7 +18,7 @@ body {
     padding: 0em;
     background: rgb(217, 217, 217, 0.5);
     justify-content: center;
-    height: 5em;
+    height: 4em;
   }
 .title-wrapper ul {
     display: flex;
@@ -60,7 +60,7 @@ body {
 /* main */
   #images {
     width: 100vw;
-    height: 95vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
